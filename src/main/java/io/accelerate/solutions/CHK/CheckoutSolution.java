@@ -31,7 +31,11 @@ public class CheckoutSolution {
         shopItems.put('E', 40);
 
         customerItems = new HashMap<>();
-        resetCart();
+        customerItems.put('A', 0);
+        customerItems.put('B', 0);
+        customerItems.put('C', 0);
+        customerItems.put('D', 0);
+        customerItems.put('E', 0);
 
     }
     public Integer checkout(String skus) {
@@ -97,3 +101,4 @@ public class CheckoutSolution {
         }
     }
 }
+
