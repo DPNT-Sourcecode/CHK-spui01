@@ -51,8 +51,8 @@ public class CheckoutSolution {
 
         return totalPrice;
     }
-    
-    public Integer checkDiscount(char item, Integer num){
+
+    private Integer checkDiscount(char item, Integer num){
         int numDiscount = 0;
         if(item == 'A' && num>=3){
             numDiscount = num/3 *20;
@@ -64,6 +64,7 @@ public class CheckoutSolution {
         return numDiscount;
     }
 }
+
 
 
 
