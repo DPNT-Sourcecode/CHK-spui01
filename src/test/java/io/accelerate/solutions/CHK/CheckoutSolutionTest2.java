@@ -49,12 +49,19 @@ public class CheckoutSolutionTest2 {
     }
 
     @Test
-    public void InvalidChar(){
-        assertEquals(checkout.checkout("ABCD./,19235735kv"), -1);
+    public void discountEnoB(){
+        assertEquals(checkout.checkout("ACDE"), 50+20+15+40);
+    }
+
+    @Test
+    public void discountEwithB(){
+        assertEquals(checkout.checkout("ABCDE"), 50+20+15+40);
     }
 
     @Test
     public void InvalidChar(){
         assertEquals(checkout.checkout("ABCD./,19235735kv"), -1);
     }
+
 }
+
