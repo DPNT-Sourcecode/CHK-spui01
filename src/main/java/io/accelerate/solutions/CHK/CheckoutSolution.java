@@ -41,7 +41,8 @@ public class CheckoutSolution {
     public Integer checkout(String skus) {
         char[] items = skus.toCharArray();
         Integer totalPrice = 0;
-        
+        int discount=0;
+
         for(char item : items){
             
             if(shopItems.containsKey(item)){
@@ -53,12 +54,15 @@ public class CheckoutSolution {
                 return -1;
             }
         }
-        int discount=0;
 
-        for(Map.Entry<Character, Integer> item : customerItems.entrySet()) {
+        for(Map.Entry<Character, Integer> entry : customerItems.entrySet()) {
+            char item = entry.getKey();
+            int count = entry.getValue();
             switch (item) {
                 case 'A':
-                    int totalA 
+                    if(count >= 5){
+                        discount -= 50* 
+                    } 
                     break;
             
                 default:
@@ -93,5 +97,6 @@ public class CheckoutSolution {
         customerItems.put('D', 0);
     }
 }
+
 
 
