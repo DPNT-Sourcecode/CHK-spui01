@@ -30,15 +30,12 @@ public class CheckoutSolution {
     }
     public Integer checkout(String skus) {
         char[] items = skus.toCharArray();
+        Integer totalPrice = 0;
         
         for(char item : items){
             if(shopItems.containsKey(item)){
-                
+                totalPrice = shopItems.get(item);
             }
         }
     }
 }
-
-
-
-
