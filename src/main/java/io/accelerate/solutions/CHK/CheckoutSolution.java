@@ -53,6 +53,8 @@ public class CheckoutSolution {
             }
         }
 
+        
+
         for(Map.Entry<Character, Integer> entry : customerItems.entrySet()) {
             char item = entry.getKey();
             int count = entry.getValue();
@@ -115,6 +117,7 @@ public class CheckoutSolution {
         customerItems.put('D', 0);
     }
 }
+
 
 
 
