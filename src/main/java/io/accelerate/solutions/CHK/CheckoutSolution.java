@@ -43,17 +43,26 @@ public class CheckoutSolution {
             if(shopItems.containsKey(item)){
                 totalPrice = shopItems.get(item);
                 customerItems.put(item, customerItems.get(item)+1);
+
+                int discount = checkDiscount(item, totalPrice)
+
             }
         }
     }
 
     public Integer checkDiscount(char item, Integer num){
+        int numDiscount = 0;
         if(item == 'A' && num>=3){
-            int numDiscount = num/3 *20;
-
+            numDiscount = num/3 *20;
         }
+        else if( item =='B' && num>=2){
+            numDiscount= num/2 * 15;
+        }
+
+        return numDiscount;
     }
 }
+
 
 
 
