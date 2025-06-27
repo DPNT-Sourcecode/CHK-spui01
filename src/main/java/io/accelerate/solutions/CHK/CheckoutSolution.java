@@ -1,6 +1,7 @@
 package io.accelerate.solutions.CHK;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import io.accelerate.runner.SolutionNotImplementedException;
@@ -25,8 +26,12 @@ public class CheckoutSolution {
         shopItems.put("D", 15);
     }
     public Integer checkout(String skus) {
-        Str
+        List<String> items = toCharArray() ;
+        for(char item : skus){
+
+        }
     }
 }
+
 
 
