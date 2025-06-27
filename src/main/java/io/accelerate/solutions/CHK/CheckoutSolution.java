@@ -44,9 +44,7 @@ public class CheckoutSolution {
         int discount=0;
 
         for(char item : items){
-            
             if(shopItems.containsKey(item)){
-                totalPrice += shopItems.get(item);
                 customerItems.put(item, customerItems.get(item)+1);
             }
             else{
@@ -63,12 +61,12 @@ public class CheckoutSolution {
                 case 'A':
                     if(count >= 5){
                         numDiscounts = count/5;
-                        discount -= 50*numDiscounts;
+                        discount -= 200*numDiscounts;
                         count -=numDiscounts;
                     } 
                     if(count >= 3){
                         numDiscounts = count/5;
-                        discount -= 20*numDiscounts;
+                        discount -= 1300*numDiscounts;
                         count -=numDiscounts;
                     }
                     break;
@@ -81,9 +79,9 @@ public class CheckoutSolution {
                     if(count>=2){
                         numDiscounts = count/2;
                         int countB = customerItems.get('B');
-                        for(int freeItems=countB; numDiscounts>0; freeItems--){
-                            
-                        }
+                        
+                        int freeItems = Math.min(countB, numDiscounts);
+                        customerItems.put()
                     }
                     
                 default:
@@ -118,6 +116,7 @@ public class CheckoutSolution {
         customerItems.put('D', 0);
     }
 }
+
 
 
 
