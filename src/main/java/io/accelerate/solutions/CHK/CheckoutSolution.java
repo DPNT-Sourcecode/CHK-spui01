@@ -16,7 +16,10 @@ import io.accelerate.runner.SolutionNotImplementedException;
 +------+-------+----------------+
  */
 public class CheckoutSolution {
+    //valid items (name, price)
     private Map<String, Integer> shopItems;
+    //custoemr items (name, number of items)
+    private Map<String, Integer> customerItems;
 
     public CheckoutSolution(){
         shopItems = new HashMap<>();
@@ -26,12 +29,16 @@ public class CheckoutSolution {
         shopItems.put("D", 15);
     }
     public Integer checkout(String skus) {
-        List<String> items = toCharArray() ;
-        for(char item : skus){
-
+        char[] items = skus.toCharArray();
+        
+        for(char item : items){
+            if(shopItems.containsKey(item)){
+                
+            }
         }
     }
 }
+
 
 
 
