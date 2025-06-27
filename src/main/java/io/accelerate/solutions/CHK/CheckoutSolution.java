@@ -61,20 +61,22 @@ public class CheckoutSolution {
                 case 'A':
                     if(count >= 5){
                         numDiscounts = count/5;
-                        discount -= 200*numDiscounts;
+                        totalPrice += 200*numDiscounts;
                         count -=numDiscounts;
                     } 
                     if(count >= 3){
                         numDiscounts = count/5;
-                        discount -= 1300*numDiscounts;
+                        totalPrice += 130*numDiscounts;
                         count -=numDiscounts;
                     }
+                    totalPrice += 50*count;
                     break;
                 case 'B': 
                     if(count>=2){
                         numDiscounts = count/2;
-                        discount -= 15*numDiscounts;
+                        totalPrice += 45*numDiscounts;
                     }
+                    totalPrice += 30*numDiscounts;
                 case 'E':
                     if(count>=2){
                         numDiscounts = count/2;
@@ -116,12 +118,3 @@ public class CheckoutSolution {
         customerItems.put('D', 0);
     }
 }
-
-
-
-
-
-
-
-
-
