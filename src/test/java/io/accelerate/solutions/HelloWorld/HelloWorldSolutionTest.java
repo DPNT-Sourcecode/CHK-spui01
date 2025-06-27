@@ -16,6 +16,12 @@ public class HelloWorldSolutionTest {
 
     @BeforeEach
     public void setUp(){
-        
+        helloWorld = new HelloSolution();
+    }
+
+    @Test
+    public void messageOutput(){
+        assertThat(helloWorld.hello("bob"), equalTo("bob, hello to the world"));
     }
 }
+
