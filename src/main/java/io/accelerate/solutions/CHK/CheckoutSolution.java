@@ -52,7 +52,6 @@ public class CheckoutSolution {
                 return -1;
             }
         }
-        customerItems = new HashMap<>();
         return totalPrice;
     }
 
@@ -67,5 +66,10 @@ public class CheckoutSolution {
 
         return numDiscount;
     }
+
+    private void resetCart(){
+        customerItems.put()
+    }
 }
+
 
