@@ -17,16 +17,19 @@ import io.accelerate.runner.SolutionNotImplementedException;
  */
 public class CheckoutSolution {
     //valid items (name, price)
-    private Map<String, Integer> shopItems;
+    private Map<Character, Integer> shopItems;
     //custoemr items (name, number of items)
     private Map<String, Integer> customerItems;
 
     public CheckoutSolution(){
         shopItems = new HashMap<>();
-        shopItems.put("A", 50);
-        shopItems.put("B", 30);
-        shopItems.put("C", 20);
-        shopItems.put("D", 15);
+        shopItems.put('A', 50);
+        shopItems.put('B', 30);
+        shopItems.put('C', 20);
+        shopItems.put('D', 15);
+
+        customerItems = new HashMap<>();
+        customerItems.put
     }
     public Integer checkout(String skus) {
         char[] items = skus.toCharArray();
@@ -35,7 +38,9 @@ public class CheckoutSolution {
         for(char item : items){
             if(shopItems.containsKey(item)){
                 totalPrice = shopItems.get(item);
+                customerItems.put(item, customerItems.get(item)+1);
             }
         }
     }
 }
+
