@@ -60,10 +60,12 @@ public class CheckoutSolution {
     private Integer checkDiscount(char item, Integer num){
         int numDiscount = 0;
         if(item == 'A' && num>=3){
-            numDiscount = num/3 *20;
+            numDiscount = 20;
+            customerItems.put('A', 0);
         }
         else if( item =='B' && num>=2){
-            numDiscount= num/2 * 15;
+            numDiscount= 15;
+            customerItems.put('B', 0);
         }
 
         return numDiscount;
@@ -76,6 +78,7 @@ public class CheckoutSolution {
         customerItems.put('D', 0);
     }
 }
+
 
 
 
