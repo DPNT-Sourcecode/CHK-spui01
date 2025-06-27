@@ -9,6 +9,7 @@ import io.accelerate.solutions.FIZ.FizzBuzzSolution;
 import io.accelerate.solutions.HLO.HelloSolution;
 import io.accelerate.solutions.SUM.SumSolution;
 import io.accelerate.solutions.ULT.UltimateSolution;
+
 import java.util.List;
 
 /**
@@ -141,6 +142,3 @@ class EntryPointMapping {
         return demoRound4n5Solution.waves(p.getFirst().getAsInteger());
     }
 }
-
-
-

@@ -6,14 +6,15 @@ import java.util.Map;
 
 import io.accelerate.runner.SolutionNotImplementedException;
 /*Our price table and offers:
-+------+-------+----------------+
-| Item | Price | Special offers |
-+------+-------+----------------+
-| A    | 50    | 3A for 130     |
-| B    | 30    | 2B for 45      |
-| C    | 20    |                |
-| D    | 15    |                |
-+------+-------+----------------+
++------+-------+------------------------+
+| Item | Price | Special offers         |
++------+-------+------------------------+
+| A    | 50    | 3A for 130, 5A for 200 |
+| B    | 30    | 2B for 45              |
+| C    | 20    |                        |
+| D    | 15    |                        |
+| E    | 40    | 2E get one B free      |
++------+-------+------------------------+
  */
 public class CheckoutSolution {
     //valid items (name, price)
@@ -27,12 +28,14 @@ public class CheckoutSolution {
         shopItems.put('B', 30);
         shopItems.put('C', 20);
         shopItems.put('D', 15);
+        shopItems.put('E', 40);
 
         customerItems = new HashMap<>();
         customerItems.put('A', 0);
         customerItems.put('B', 0);
         customerItems.put('C', 0);
         customerItems.put('D', 0);
+        customerItems.put('E', 0);
 
     }
     public Integer checkout(String skus) {
@@ -79,8 +82,3 @@ public class CheckoutSolution {
         customerItems.put('D', 0);
     }
 }
-
-
-
-
-
