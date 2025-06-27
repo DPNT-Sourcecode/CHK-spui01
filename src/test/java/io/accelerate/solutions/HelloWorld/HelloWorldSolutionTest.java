@@ -21,6 +21,7 @@ public class HelloWorldSolutionTest {
 
     @Test
     public void messageOutput(){
-        assertThat(helloWorld.hello("bob"), equalTo("Hello, World!"));
+        assertThat(helloWorld.hello("John"), equalTo("Hello, John!"));
     }
 }
+
