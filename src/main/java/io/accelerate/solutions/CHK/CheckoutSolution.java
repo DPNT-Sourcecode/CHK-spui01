@@ -55,7 +55,19 @@ public class CheckoutSolution {
         }
         int discount=0;
 
-        for(Map.customerItems)
+        for(Map.Entry<Character, Integer> item : customerItems.entrySet()) {
+            switch (item) {
+                case 'A':
+                    int totalA 
+                    break;
+            
+                default:
+                    break;
+            }
+        }
+
+
+
         resetCart();
         return totalPrice;
     }
@@ -81,4 +93,5 @@ public class CheckoutSolution {
         customerItems.put('D', 0);
     }
 }
+
 
