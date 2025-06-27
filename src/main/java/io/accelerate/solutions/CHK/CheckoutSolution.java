@@ -58,11 +58,19 @@ public class CheckoutSolution {
         for(Map.Entry<Character, Integer> entry : customerItems.entrySet()) {
             char item = entry.getKey();
             int count = entry.getValue();
+            int numDiscounts = 0;
             switch (item) {
                 case 'A':
                     if(count >= 5){
-                        discount -= 50* 
+                        numDiscounts = count/5;
+                        discount -= 50*numDiscounts;
+                        count -=numDiscounts;
                     } 
+                    if(count >= 3){
+                        numDiscounts = count/5;
+                        discount -= 50*numDiscounts;
+                        count -=numDiscounts;
+                    }
                     break;
             
                 default:
@@ -97,6 +105,7 @@ public class CheckoutSolution {
         customerItems.put('D', 0);
     }
 }
+
 
 
 
