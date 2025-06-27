@@ -2,6 +2,7 @@ package io.accelerate.solutions.CHK;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -28,7 +29,28 @@ public class CheckoutSolutionTest {
 
     @Test
     public void simpleShopping(){
-        assertThat(checkout.checkout("ABCD"), equalTo(115));
+        assertEquals(checkout.checkout("ABCD"), 115);
+    }
+
+    @Test
+    public void discountA(){
+        assertEquals(checkout.checkout("AABCAD"), 130+30+20+15);
+    }
+
+    @Test
+    public void discountB(){
+        assertEquals(checkout.checkout("AABBCD"), 100+45+20+15);
+    }
+
+    @Test
+    public void discountAB(){
+        assertEquals(checkout.checkout("AAABBCD"), 130+45+20+15);
+    }
+
+    @Test
+    public void InvalidChar(){
+        assertEquals(checkout.checkout("AfcvxgbAABBCD"), 130+45+20+15);
     }
 }
+
 
