@@ -40,11 +40,12 @@ public class CheckoutSolution {
         Integer totalPrice = 0;
         
         for(char item : items){
+            int discount=0;
             if(shopItems.containsKey(item)){
                 totalPrice += shopItems.get(item);
                 customerItems.put(item, customerItems.get(item)+1);
 
-                int discount = checkDiscount(item, customerItems.get(item));
+                discount = checkDiscount(item, customerItems.get(item));
                 totalPrice -= discount; 
             }
             else{
@@ -67,11 +68,3 @@ public class CheckoutSolution {
         return numDiscount;
     }
 }
-
-
-
-
-
-
-
-

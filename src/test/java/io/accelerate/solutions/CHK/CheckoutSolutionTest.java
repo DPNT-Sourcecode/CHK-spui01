@@ -52,7 +52,3 @@ public class CheckoutSolutionTest {
         assertEquals(checkout.checkout("ABCD./,19235735kv"), -1);
     }
 }
-
-
-
-
