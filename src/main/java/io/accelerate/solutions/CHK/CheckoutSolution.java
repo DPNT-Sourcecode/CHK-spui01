@@ -49,6 +49,7 @@ public class CheckoutSolution {
                 totalPrice -= discount; 
             }
             else{
+                resetCart();
                 return -1;
             }
         }
@@ -78,6 +79,7 @@ public class CheckoutSolution {
         customerItems.put('D', 0);
     }
 }
+
 
 
 
