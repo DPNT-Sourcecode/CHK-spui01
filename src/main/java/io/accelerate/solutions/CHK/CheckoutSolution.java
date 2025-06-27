@@ -52,6 +52,8 @@ public class CheckoutSolution {
                 return -1;
             }
         }
+
+        resetCart();
         return totalPrice;
     }
 
@@ -68,8 +70,12 @@ public class CheckoutSolution {
     }
 
     private void resetCart(){
-        customerItems.put()
+        customerItems.put('A', 0);
+        customerItems.put('B', 0);
+        customerItems.put('C', 0);
+        customerItems.put('D', 0);
     }
 }
+
 
 
