@@ -53,11 +53,13 @@ public class CheckoutSolution {
             }
         }
 
-        
+        int countE = customerItems.get('E');
+        int freeBs = countE/2;
+        int count = 
 
         for(Map.Entry<Character, Integer> entry : customerItems.entrySet()) {
             char item = entry.getKey();
-            int count = entry.getValue();
+            count = entry.getValue();
             int itemPrice = shopItems.get(item);
             int numDiscounts = 0;
             switch (item) {
@@ -83,15 +85,6 @@ public class CheckoutSolution {
                     }
                     totalPrice += itemPrice*count;
                     break;
-
-                case 'C':
-                    totalPrice += itemPrice*count;
-                    break;
-
-                case 'D':
-                    totalPrice += itemPrice*count;
-                    break;
-
                 case 'E':
                     if(count>=2){
                         numDiscounts = count/2;
@@ -103,6 +96,7 @@ public class CheckoutSolution {
                     break;
                     
                 default:
+                    totalPrice += itemPrice*count;
                     break;
             }
         }
@@ -117,6 +111,7 @@ public class CheckoutSolution {
         customerItems.put('D', 0);
     }
 }
+
 
 
 
