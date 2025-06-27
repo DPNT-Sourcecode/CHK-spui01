@@ -55,7 +55,7 @@ public class CheckoutSolutionTest2 {
 
     @Test
     public void discountEwithB(){
-        assertEquals(checkout.checkout("ABCDE"), 50+20+15+40);
+        assertEquals(checkout.checkout("ABCDEE"), 50+20+15+40);
     }
 
     @Test
@@ -64,4 +64,5 @@ public class CheckoutSolutionTest2 {
     }
 
 }
+
 
