@@ -31,17 +31,12 @@ public class CheckoutSolution {
         shopItems.put('E', 40);
 
         customerItems = new HashMap<>();
-        customerItems.put('A', 0);
-        customerItems.put('B', 0);
-        customerItems.put('C', 0);
-        customerItems.put('D', 0);
-        customerItems.put('E', 0);
+        resetCart();
 
     }
     public Integer checkout(String skus) {
         char[] items = skus.toCharArray();
         Integer totalPrice = 0;
-        int discount=0;
 
         for(char item : items){
             if(shopItems.containsKey(item)){
@@ -86,7 +81,7 @@ public class CheckoutSolution {
                     }
                     totalPrice += itemPrice*count;
                     break;
-                                      
+
                 default:
                     totalPrice += itemPrice*count;
                     break;
@@ -97,16 +92,8 @@ public class CheckoutSolution {
     }
 
     private void resetCart(){
-        customerItems.put('A', 0);
-        customerItems.put('B', 0);
-        customerItems.put('C', 0);
-        customerItems.put('D', 0);
+        for(char item : customerItems.keySet()){
+            customerItems.put(item, 0);
+        }
     }
 }
-
-
-
-
-
-
-
