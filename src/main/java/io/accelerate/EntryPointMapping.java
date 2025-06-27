@@ -10,7 +10,7 @@ import io.accelerate.solutions.HLO.HelloSolution;
 import io.accelerate.solutions.SUM.SumSolution;
 import io.accelerate.solutions.ULT.UltimateSolution;
 
-import java.util.List;deploy
+import java.util.List;
 
 /**
  * This class maps an RPC event to a method call.
@@ -142,4 +142,5 @@ class EntryPointMapping {
         return demoRound4n5Solution.waves(p.getFirst().getAsInteger());
     }
 }
+
 
