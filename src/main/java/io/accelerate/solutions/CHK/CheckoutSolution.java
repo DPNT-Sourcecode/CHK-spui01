@@ -72,24 +72,29 @@ public class CheckoutSolution {
                     }
                     totalPrice += itemPrice*count;
                     break;
+
                 case 'B': 
                     if(count>=2){
                         numDiscounts = count/2;
                         totalPrice += 45*numDiscounts;
+                        count -=numDiscounts;
                     }
-                    totalPrice += itemPrice*numDiscounts;
+                    totalPrice += itemPrice*count;
                     break;
+
                 case 'C':
                     totalPrice += itemPrice*count;
                     break;
+
                 case 'D':
                     totalPrice += itemPrice*count;
                     break;
+                    
                 case 'E':
                     if(count>=2){
                         numDiscounts = count/2;
                         int countB = customerItems.get('B');
-                        
+
                         int freeItems = Math.min(countB, numDiscounts);
                         totalPrice += (itemPrice*count) - (freeItems*30);
                     }
@@ -110,5 +115,6 @@ public class CheckoutSolution {
         customerItems.put('D', 0);
     }
 }
+
 
 
