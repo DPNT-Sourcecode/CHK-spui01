@@ -78,7 +78,11 @@ public class CheckoutSolution {
                         discount -= 15*numDiscounts;
                     }
                 case 'E':
-                    
+                    if(count>=2){
+                        numDiscounts = count/2;
+                        int countB = customerItems.get('B');
+                        
+                    }
                     
                 default:
                     break;
@@ -112,6 +116,7 @@ public class CheckoutSolution {
         customerItems.put('D', 0);
     }
 }
+
 
 
 
