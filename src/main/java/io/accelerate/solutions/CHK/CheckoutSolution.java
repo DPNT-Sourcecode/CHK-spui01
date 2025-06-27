@@ -56,7 +56,7 @@ public class CheckoutSolution {
         for(Map.Entry<Character, Integer> entry : customerItems.entrySet()) {
             char item = entry.getKey();
             int count = entry.getValue();
-            int itemPrice = 
+            int itemPrice = shopItems.get(item);
             int numDiscounts = 0;
             switch (item) {
                 case 'A':
@@ -70,47 +70,37 @@ public class CheckoutSolution {
                         totalPrice += 130*numDiscounts;
                         count -=numDiscounts;
                     }
-                    totalPrice += 50*count;
+                    totalPrice += itemPrice*count;
                     break;
                 case 'B': 
                     if(count>=2){
                         numDiscounts = count/2;
                         totalPrice += 45*numDiscounts;
                     }
-                    totalPrice += 30*numDiscounts;
-                case
+                    totalPrice += itemPrice*numDiscounts;
+                    break;
+                case 'C':
+                    totalPrice += itemPrice*count;
+                    break;
+                case 'D':
+                    totalPrice += itemPrice*count;
+                    break;
                 case 'E':
                     if(count>=2){
                         numDiscounts = count/2;
                         int countB = customerItems.get('B');
                         
                         int freeItems = Math.min(countB, numDiscounts);
-                        totalPrice = (40*count) - (freeItems*30);
+                        totalPrice += (itemPrice*count) - (freeItems*30);
                     }
+                    break;
                     
                 default:
                     break;
             }
         }
-
-
-
         resetCart();
         return totalPrice;
-    }
-
-    private Integer checkDiscount(char item, Integer num){
-        int numDiscount = 0;
-        if(item == 'A' && num>=3){
-            numDiscount = 20;
-            customerItems.put('A', 0);
-        }
-        else if( item =='B' && num>=2){
-            numDiscount= 15;
-            customerItems.put('B', 0);
-        }
-
-        return numDiscount;
     }
 
     private void resetCart(){
@@ -120,4 +110,5 @@ public class CheckoutSolution {
         customerItems.put('D', 0);
     }
 }
+
 
