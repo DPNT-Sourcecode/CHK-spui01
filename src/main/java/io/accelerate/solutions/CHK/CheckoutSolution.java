@@ -36,7 +36,7 @@ public class CheckoutSolution {
 
     }
     public Integer checkout(String skus) {
-        char[] items = skus.toUpperCase().toCharArray();
+        char[] items = skus.toCharArray();
         Integer totalPrice = 0;
         
         for(char item : items){
@@ -46,6 +46,9 @@ public class CheckoutSolution {
 
                 int discount = checkDiscount(item, customerItems.get(item));
                 totalPrice -= discount; 
+            }
+            else{
+                return -1;
             }
         }
 
@@ -64,6 +67,7 @@ public class CheckoutSolution {
         return numDiscount;
     }
 }
+
 
 
 
