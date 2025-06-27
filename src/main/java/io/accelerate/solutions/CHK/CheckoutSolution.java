@@ -48,8 +48,12 @@ public class CheckoutSolution {
     }
 
     public Integer checkDiscount(char item, Integer num){
-        
+        if(item == 'A' && num>=3){
+            int numDiscount = num/3 *20;
+
+        }
     }
 }
+
 
 
