@@ -68,11 +68,17 @@ public class CheckoutSolution {
                     } 
                     if(count >= 3){
                         numDiscounts = count/5;
-                        discount -= 50*numDiscounts;
+                        discount -= 20*numDiscounts;
                         count -=numDiscounts;
                     }
                     break;
-            
+                case 'B': 
+                    if(count>=2){
+                        numDiscounts = count/5;
+                        discount -= 50*numDiscounts;
+                        count -=numDiscounts;
+                    }
+                    
                 default:
                     break;
             }
@@ -82,6 +88,20 @@ public class CheckoutSolution {
 
         resetCart();
         return totalPrice;
+    }
+
+    private Integer getDiscount(Integer count, Integer Threshold){
+        int numDiscount = 0;
+        if(item == 'A' && num>=3){
+            numDiscount = 20;
+            customerItems.put('A', 0);
+        }
+        else if( item =='B' && num>=2){
+            numDiscount= 15;
+            customerItems.put('B', 0);
+        }
+
+        return numDiscount;
     }
 
     private Integer checkDiscount(char item, Integer num){
@@ -105,6 +125,7 @@ public class CheckoutSolution {
         customerItems.put('D', 0);
     }
 }
+
 
 
 
