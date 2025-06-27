@@ -19,7 +19,7 @@ public class CheckoutSolution {
     //valid items (name, price)
     private Map<Character, Integer> shopItems;
     //custoemr items (name, number of items)
-    private Map<String, Integer> customerItems;
+    private Map<Character, Integer> customerItems;
 
     public CheckoutSolution(){
         shopItems = new HashMap<>();
@@ -29,7 +29,11 @@ public class CheckoutSolution {
         shopItems.put('D', 15);
 
         customerItems = new HashMap<>();
-        customerItems.put
+        customerItems.put('A', 0);
+        customerItems.put('B', 0);
+        customerItems.put('C', 0);
+        customerItems.put('D', 0);
+
     }
     public Integer checkout(String skus) {
         char[] items = skus.toCharArray();
@@ -42,5 +46,10 @@ public class CheckoutSolution {
             }
         }
     }
+
+    public Integer checkDiscount(char item, Integer num){
+        
+    }
 }
+
 
