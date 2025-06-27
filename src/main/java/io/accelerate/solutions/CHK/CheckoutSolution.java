@@ -1,5 +1,6 @@
 package io.accelerate.solutions.CHK;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import io.accelerate.runner.SolutionNotImplementedException;
@@ -16,9 +17,16 @@ import io.accelerate.runner.SolutionNotImplementedException;
 public class CheckoutSolution {
     private Map<String, Integer> shopItems;
 
-    
+    public CheckoutSolution(){
+        shopItems = new HashMap<>();
+        shopItems.put("A", 50);
+        shopItems.put("B", 30);
+        shopItems.put("C", 20);
+        shopItems.put("D", 15);
+    }
     public Integer checkout(String skus) {
-        throw new SolutionNotImplementedException();
+        Str
     }
 }
+
 
