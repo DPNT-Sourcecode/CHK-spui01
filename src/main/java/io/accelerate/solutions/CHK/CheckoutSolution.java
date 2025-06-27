@@ -81,7 +81,9 @@ public class CheckoutSolution {
                     if(count>=2){
                         numDiscounts = count/2;
                         int countB = customerItems.get('B');
-                        
+                        for(int freeItems=countB; numDiscounts>0; freeItems--){
+                            
+                        }
                     }
                     
                 default:
@@ -116,6 +118,7 @@ public class CheckoutSolution {
         customerItems.put('D', 0);
     }
 }
+
 
 
 
