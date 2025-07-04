@@ -73,4 +73,11 @@ public class CheckoutSolutionTest2 {
         assertEquals(checkout.checkout("FFF"), 20);
     }
 
+    @Test
+    public void CheckDiscountV(){
+        assertEquals(checkout.checkout("V"), 50);
+        assertEquals(checkout.checkout("VV"), 90);
+        assertEquals(checkout.checkout("VVV"), 130);
+    }
+
 }

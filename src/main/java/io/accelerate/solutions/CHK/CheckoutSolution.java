@@ -101,8 +101,6 @@ public class CheckoutSolution {
         customerItems.put('Y', 0);
         customerItems.put('Z', 0);
 
-        
-
     }
     public Integer checkout(String skus) {
         char[] items = skus.toCharArray();
@@ -243,10 +241,3 @@ public class CheckoutSolution {
         }
     }
 }
-
-
-
-
-
-
-
