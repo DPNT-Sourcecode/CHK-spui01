@@ -97,6 +97,7 @@ public class CheckoutSolution {
         customerItems.put('T', 0);
         customerItems.put('U', 0);
         customerItems.put('V', 0);
+        customerItems.put('W', 0);
         customerItems.put('X', 0);
         customerItems.put('Y', 0);
         customerItems.put('Z', 0);
@@ -241,3 +242,4 @@ public class CheckoutSolution {
         }
     }
 }
+
