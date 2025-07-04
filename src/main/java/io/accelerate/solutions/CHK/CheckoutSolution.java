@@ -235,11 +235,9 @@ public class CheckoutSolution {
         int countFreeItems = customerItems.get(freeitem);
         customerItems.put(freeitem, Math.max(0, countFreeItems-frees));
     }
-    private void groupDiscount(char item, int itemsNeeded, char freeitem, int numFree){
-        int count = customerItems.get(item);
-        int frees = count/itemsNeeded;
-        int countFreeItems = customerItems.get(freeitem);
-        customerItems.put(freeitem, Math.max(0, countFreeItems-frees));
+    private void groupDiscount(){
+        int TotalGroup = 0;
+        for(char item : customerItems.))
     }
 
     private void resetCart(){
@@ -248,5 +246,6 @@ public class CheckoutSolution {
         }
     }
 }
+
 
 
