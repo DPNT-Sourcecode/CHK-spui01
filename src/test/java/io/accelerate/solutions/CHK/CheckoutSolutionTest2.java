@@ -80,4 +80,12 @@ public class CheckoutSolutionTest2 {
         assertEquals(checkout.checkout("VVV"), 130);
     }
 
+    @Test
+    public void GroupDiscount(){
+        assertEquals(checkout.checkout("V"), 50);
+        assertEquals(checkout.checkout("VV"), 90);
+        assertEquals(checkout.checkout("VVV"), 130);
+    }
+
 }
+

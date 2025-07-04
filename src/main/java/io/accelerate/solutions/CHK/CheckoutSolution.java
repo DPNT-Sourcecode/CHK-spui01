@@ -120,7 +120,7 @@ public class CheckoutSolution {
         freeItems('E',2,'B',1);
         freeItems('N',3,'M',1);
         freeItems('R',3,'Q',1);
-
+        totalPrice += groupDiscount();
 
         for(Map.Entry<Character, Integer> entry : customerItems.entrySet()) {
             char item = entry.getKey();
@@ -250,8 +250,9 @@ public class CheckoutSolution {
         total = numGroupDisc * 45;
         for(int i=0; i<group.length && totalGroup>0; i++){
             char curItem = group[i];
-            for(customerItems.get(curItem)>0){
-                
+            while(customerItems.get(curItem)>0){
+                customerItems.put(curItem,customerItems.get(curItem)-1);
+                totalGroup--;
             }
         }
 
@@ -264,6 +265,7 @@ public class CheckoutSolution {
         }
     }
 }
+
 
 
 
