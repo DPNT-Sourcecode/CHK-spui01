@@ -175,7 +175,7 @@ public class CheckoutSolution {
                 case 'K':
                     if(count >= 2){
                         numDiscounts = count/2;
-                        totalPrice += 150*numDiscounts;
+                        totalPrice += 120*numDiscounts;
                         count -=numDiscounts*2;
                     }
                     totalPrice += itemPrice*count;
@@ -235,6 +235,12 @@ public class CheckoutSolution {
         int countFreeItems = customerItems.get(freeitem);
         customerItems.put(freeitem, Math.max(0, countFreeItems-frees));
     }
+    private void groupDiscount(char item, int itemsNeeded, char freeitem, int numFree){
+        int count = customerItems.get(item);
+        int frees = count/itemsNeeded;
+        int countFreeItems = customerItems.get(freeitem);
+        customerItems.put(freeitem, Math.max(0, countFreeItems-frees));
+    }
 
     private void resetCart(){
         for(char item : customerItems.keySet()){
@@ -242,4 +248,5 @@ public class CheckoutSolution {
         }
     }
 }
+
 
