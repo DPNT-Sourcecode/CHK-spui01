@@ -20,7 +20,7 @@ import io.accelerate.runner.SolutionNotImplementedException;
 | H    | 10    | 5H for 45, 10H for 80  |
 | I    | 35    |                        |
 | J    | 60    |                        |
-| K    | 80    | 2K for 150             |
+| K    | 80    | 2K for 120             |
 | L    | 90    |                        |
 | M    | 15    |                        |
 | N    | 40    | 3N get one M free      |
@@ -249,10 +249,11 @@ public class CheckoutSolution {
         numGroupDisc = totalGroup/3;
         total = numGroupDisc * 45;
 
+        int itemsToRemove = numGroupDisc*3;
         for(char item : group){
-            while(totalGroup>0 && customerItems.get(item)>0){
+            while(itemsToRemove>0 && customerItems.get(item)>0){
                 customerItems.put(item, customerItems.get(item)-1);
-                totalGroup--;
+                itemsToRemove--;
             }
         }
 
@@ -265,5 +266,6 @@ public class CheckoutSolution {
         }
     }
 }
+
 
 
