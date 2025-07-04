@@ -64,9 +64,17 @@ public class CheckoutSolutionTest2 {
     }
 
     @Test
-    public void InvalidChar(){
-        assertEquals(checkout.checkout("FFF"), -1);
+    public void CheckItemF(){
+        assertEquals(checkout.checkout("F"), 10);
+        assertEquals(checkout.checkout("FFF"), 20);
+    }
+
+    @Test
+    public void CheckItemF(){
+        assertEquals(checkout.checkout("F"), 10);
+        assertEquals(checkout.checkout("FFF"), 20);
     }
 
 }
+
 
