@@ -14,6 +14,7 @@ import io.accelerate.runner.SolutionNotImplementedException;
 | C    | 20    |                        |
 | D    | 15    |                        |
 | E    | 40    | 2E get one B free      |
+| F    | 10    | 2F get one F free      |
 +------+-------+------------------------+
  */
 public class CheckoutSolution {
@@ -29,6 +30,7 @@ public class CheckoutSolution {
         shopItems.put('C', 20);
         shopItems.put('D', 15);
         shopItems.put('E', 40);
+        shopItems.put('F', 10);
 
         customerItems = new HashMap<>();
         customerItems.put('A', 0);
@@ -36,6 +38,7 @@ public class CheckoutSolution {
         customerItems.put('C', 0);
         customerItems.put('D', 0);
         customerItems.put('E', 0);
+        customerItems.put('F', 0);
 
     }
     public Integer checkout(String skus) {
@@ -85,7 +88,9 @@ public class CheckoutSolution {
                     }
                     totalPrice += itemPrice*count;
                     break;
-
+                
+                case 'F':
+                    if(count>)
                 default:
                     totalPrice += itemPrice*count;
                     break;
@@ -101,3 +106,4 @@ public class CheckoutSolution {
         }
     }
 }
+
