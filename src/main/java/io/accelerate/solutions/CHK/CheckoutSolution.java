@@ -119,6 +119,8 @@ public class CheckoutSolution {
         }
 
         freeItems('E',2,'B',1);
+        freeItems('N',3,'M',1);
+        freeItems('R',3,'Q',1);
 
 
         for(Map.Entry<Character, Integer> entry : customerItems.entrySet()) {
@@ -180,6 +182,31 @@ public class CheckoutSolution {
                     totalPrice += itemPrice*count;
                     break;
 
+                case 'P':
+                    if(count >= 5){
+                        numDiscounts = count/5;
+                        totalPrice += 200*numDiscounts;
+                        count -=numDiscounts*5;
+                    }
+                    totalPrice += itemPrice*count;
+                    break;
+
+                case 'Q':
+                    if(count >= 3){
+                        numDiscounts = count/3;
+                        totalPrice += 80*numDiscounts;
+                        count -=numDiscounts*3;
+                    }
+                    totalPrice += itemPrice*count;
+                    break;
+
+                case 'U':
+                    if(count>=3){
+                        count = count/3 * 2 + (count%3);
+                    }
+                    totalPrice += itemPrice*count;
+                    break;
+
                 default:
                     totalPrice += itemPrice*count;
                     break;
@@ -202,6 +229,7 @@ public class CheckoutSolution {
         }
     }
 }
+
 
 
 
