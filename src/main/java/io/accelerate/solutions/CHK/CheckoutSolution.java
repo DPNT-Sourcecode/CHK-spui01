@@ -122,6 +122,7 @@ public class CheckoutSolution {
         int freeBs = countE/2;
         int countB = customerItems.get('B');
         customerItems.put('B', Math.max(0, countB-freeBs));
+        freeItems('E',2,'B',1);
 
         for(Map.Entry<Character, Integer> entry : customerItems.entrySet()) {
             char item = entry.getKey();
@@ -168,8 +169,11 @@ public class CheckoutSolution {
         return totalPrice;
     }
 
-    private void freeItems(int itemsNeeded, int numFree){
-
+    private void freeItems(char item, int itemsNeeded, char freeitem, int numFree){
+        int count = customerItems.get(item);
+        int frees = count/itemsNeeded;
+        int countFreeItems = customerItems.get(freeitem);
+        customerItems.put(freeitem, Math.max(0, countFreeItems-frees));
     }
 
     private void resetCart(){
@@ -178,6 +182,7 @@ public class CheckoutSolution {
         }
     }
 }
+
 
 
 
