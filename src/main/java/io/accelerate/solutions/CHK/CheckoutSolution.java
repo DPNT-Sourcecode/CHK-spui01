@@ -248,8 +248,11 @@ public class CheckoutSolution {
 
         numGroupDisc = totalGroup/3;
         total = numGroupDisc * 45;
-        while(totalGroup>0){
-            for()
+        for(int i=0; i<group.length && totalGroup>0; i++){
+            char curItem = group[i];
+            for(customerItems.get(curItem)>0){
+                
+            }
         }
 
         return total;
@@ -261,6 +264,7 @@ public class CheckoutSolution {
         }
     }
 }
+
 
 
 
