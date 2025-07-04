@@ -87,7 +87,13 @@ public class CheckoutSolutionTest2 {
 
     @Test
     public void GroupDiscount2(){
-        assertEquals(checkout.checkout("XYZZ"), 45+17);
+        assertEquals(checkout.checkout("XYZA"), 45+50);
+    }
+
+     @Test
+    public void GroupDiscount3(){
+        assertEquals(checkout.checkout("XYZX"), 45+17);
     }
 
 }
+
