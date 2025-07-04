@@ -92,9 +92,9 @@ public class CheckoutSolution {
                 case 'F':
                     if(count>=3){
                         numDiscounts = count/2;
-                        count -= numDiscounts
+                        count -= numDiscounts;
                     }
-                    totalPrice += itemPrice*customerItems.get('F');
+                    totalPrice += itemPrice*count;
 
                 default:
                     totalPrice += itemPrice*count;
@@ -111,6 +111,7 @@ public class CheckoutSolution {
         }
     }
 }
+
 
 
 
