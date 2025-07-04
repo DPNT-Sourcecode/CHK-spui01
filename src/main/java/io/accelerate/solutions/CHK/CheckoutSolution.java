@@ -52,19 +52,26 @@ public class CheckoutSolution {
         shopItems.put('D', 15);
         shopItems.put('E', 40);
         shopItems.put('F', 10);
-
-        shopItems.put('F', 10);
-        shopItems.put('F', 10);
-        shopItems.put('F', 10);
-        shopItems.put('F', 10);
-        shopItems.put('F', 10);
-        shopItems.put('F', 10);
-        shopItems.put('F', 10);
-        shopItems.put('F', 10);
-        shopItems.put('F', 10);
-        shopItems.put('F', 10);
-        shopItems.put('F', 10);
-        shopItems.put('F', 10);
+        shopItems.put('G', 20);
+        shopItems.put('H', 10);
+        shopItems.put('I', 35);
+        shopItems.put('J', 60);
+        shopItems.put('K', 80);
+        shopItems.put('L', 90);
+        shopItems.put('M', 15);
+        shopItems.put('N', 40);
+        shopItems.put('O', 10);
+        shopItems.put('P', 50);
+        shopItems.put('Q', 30);
+        shopItems.put('R', 50);
+        shopItems.put('S', 30);
+        shopItems.put('T', 20);
+        shopItems.put('U', 40);
+        shopItems.put('V', 50);
+        shopItems.put('W', 20);
+        shopItems.put('X', 90);
+        shopItems.put('Y', 10);
+        shopItems.put('Z', 50);
 
 
         customerItems = new HashMap<>();
@@ -74,6 +81,26 @@ public class CheckoutSolution {
         customerItems.put('D', 0);
         customerItems.put('E', 0);
         customerItems.put('F', 0);
+                shopItems.put('G', 20);
+        shopItems.put('H', 10);
+        shopItems.put('I', 35);
+        shopItems.put('J', 60);
+        shopItems.put('K', 80);
+        shopItems.put('L', 90);
+        shopItems.put('M', 15);
+        shopItems.put('N', 40);
+        shopItems.put('O', 10);
+        shopItems.put('P', 50);
+        shopItems.put('Q', 30);
+        shopItems.put('R', 50);
+        shopItems.put('S', 30);
+        shopItems.put('T', 20);
+        shopItems.put('U', 40);
+        shopItems.put('V', 50);
+        shopItems.put('W', 20);
+        shopItems.put('X', 90);
+        shopItems.put('Y', 10);
+        shopItems.put('Z', 50);
 
     }
     public Integer checkout(String skus) {
@@ -146,4 +173,5 @@ public class CheckoutSolution {
         }
     }
 }
+
 
