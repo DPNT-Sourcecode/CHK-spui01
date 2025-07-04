@@ -63,4 +63,10 @@ public class CheckoutSolutionTest2 {
         assertEquals(checkout.checkout("ABCD./,19235735kv"), -1);
     }
 
+    @Test
+    public void InvalidChar(){
+        assertEquals(checkout.checkout("FFF"), -1);
+    }
+
 }
+
