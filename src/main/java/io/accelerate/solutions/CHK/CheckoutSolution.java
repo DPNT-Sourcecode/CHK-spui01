@@ -91,7 +91,7 @@ public class CheckoutSolution {
                 
                 case 'F':
                     if(count>=3){
-                        numDiscounts = count/2;
+                        numDiscounts = count/3;
                         count -= numDiscounts;
                     }
                     totalPrice += itemPrice*count;
@@ -111,6 +111,7 @@ public class CheckoutSolution {
         }
     }
 }
+
 
 
 
