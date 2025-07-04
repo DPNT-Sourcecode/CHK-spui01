@@ -235,18 +235,24 @@ public class CheckoutSolution {
         int countFreeItems = customerItems.get(freeitem);
         customerItems.put(freeitem, Math.max(0, countFreeItems-frees));
     }
-    private void groupDiscount(){
+    private int groupDiscount(){
         // favour Z -> STY -> X
         char[] group = {'Z', 'S', 'T', 'Y', 'X'};
         int totalGroup = 0;
         int numGroupDisc = 0;
+        int total = 0;
 
         for(char item : group){
             totalGroup += customerItems.get(item);
         }
 
-        totalGroup/
-        while(totalGroup)
+        numGroupDisc = totalGroup/3;
+        total = numGroupDisc * 45;
+        while(totalGroup>0){
+            for()
+        }
+
+        return total;
     }
 
     private void resetCart(){
@@ -255,6 +261,7 @@ public class CheckoutSolution {
         }
     }
 }
+
 
 
 
