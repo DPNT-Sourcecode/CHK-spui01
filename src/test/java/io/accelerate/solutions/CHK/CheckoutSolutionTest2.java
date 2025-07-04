@@ -82,10 +82,12 @@ public class CheckoutSolutionTest2 {
 
     @Test
     public void GroupDiscount(){
-        assertEquals(checkout.checkout("V"), 50);
-        assertEquals(checkout.checkout("VV"), 90);
-        assertEquals(checkout.checkout("VVV"), 130);
+        assertEquals(checkout.checkout("XYZ"), 45);
+    }
+
+    @Test
+    public void GroupDiscount2(){
+        assertEquals(checkout.checkout("XYZZ"), 45+17);
     }
 
 }
-
