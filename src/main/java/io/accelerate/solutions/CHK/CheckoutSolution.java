@@ -56,7 +56,7 @@ public class CheckoutSolution {
         shopItems.put('H', 10);
         shopItems.put('I', 35);
         shopItems.put('J', 60);
-        shopItems.put('K', 80);
+        shopItems.put('K', 70);
         shopItems.put('L', 90);
         shopItems.put('M', 15);
         shopItems.put('N', 40);
@@ -64,14 +64,14 @@ public class CheckoutSolution {
         shopItems.put('P', 50);
         shopItems.put('Q', 30);
         shopItems.put('R', 50);
-        shopItems.put('S', 30);
+        shopItems.put('S', 20);
         shopItems.put('T', 20);
         shopItems.put('U', 40);
         shopItems.put('V', 50);
         shopItems.put('W', 20);
-        shopItems.put('X', 90);
-        shopItems.put('Y', 10);
-        shopItems.put('Z', 50);
+        shopItems.put('X', 17);
+        shopItems.put('Y', 20);
+        shopItems.put('Z', 21);
 
 
         customerItems = new HashMap<>();
@@ -266,6 +266,7 @@ public class CheckoutSolution {
         }
     }
 }
+
 
 
 
