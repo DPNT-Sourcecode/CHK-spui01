@@ -201,8 +201,22 @@ public class CheckoutSolution {
                     break;
 
                 case 'U':
-                    if(count>=3){
-                        count = count/3 * 2 + (count%3);
+                    if(count>=4){
+                        count = count/4 * 3 + (count%4);
+                    }
+                    totalPrice += itemPrice*count;
+                    break;
+
+                case 'V':
+                    if(count >= 3){
+                        numDiscounts = count/3;
+                        totalPrice += 130*numDiscounts;
+                        count -=numDiscounts*3;
+                    } 
+                    if(count >= 2){
+                        numDiscounts = count/2;
+                        totalPrice += 90*numDiscounts;
+                        count -=numDiscounts*2;
                     }
                     totalPrice += itemPrice*count;
                     break;
@@ -229,6 +243,7 @@ public class CheckoutSolution {
         }
     }
 }
+
 
 
 
